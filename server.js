@@ -22,7 +22,9 @@ const connectDB = async() => {
 const tasRouter = require("./routes/tasks");
 app.use("/api/tasks",tasRouter)
 
-
+app.get('/', (req, res) => {
+    res.send("<h1>Server Running Just Fine !!</h1>")
+})
 
 
 
